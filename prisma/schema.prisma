@@ -9,21 +9,21 @@ datasource db {
 }
 
 model User {
-  id                    Int      @id @default(autoincrement())
-  name                  String
-  surname               String?
-  email                 String   @unique
-  password              String
-  role                  String?
-  course                String?
-  active                Boolean  @default(true)
-  accepNotifications   Boolean  @default(true)
-  createdAt            DateTime @default(now())
-  updatedAt            DateTime @updatedAt
+  id                  Int      @id @default(autoincrement())
+  name                String
+  surname             String?
+  email               String   @unique
+  password            String
+  role                String?
+  course              String?
+  active              Boolean  @default(true)
+  accepNotifications  Boolean  @default(true)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
 
-  offers               Offer[]
-  rates                Rate[]
-  games                Game[]
+  offers              Offer[]
+  rates               Rate[]
+  gameOffers          GameOffer[]
 }
 
 model Offer {
@@ -55,7 +55,7 @@ model Category {
   updatedAt     DateTime  @updatedAt
 
   offers        Offer[]
-  games         Game[]
+  gameOffers    GameOffer[]
 }
 
 model Rate {
@@ -72,7 +72,7 @@ model Rate {
   @@id([idUser, idOffer])
 }
 
-model Game {
+model GameOffer {
   id            Int      @id @default(autoincrement())
   title         String
   description   String?
