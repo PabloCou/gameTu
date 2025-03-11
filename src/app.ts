@@ -24,11 +24,11 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
-// Middleware de seguridad y optimización
-app.use(express.json());  // Para parsear JSON en las solicitudes
-app.use(helmet());  // Protege contra vulnerabilidades comunes
-app.use(compression());  // Comprime las respuestas HTTP
-app.use(morgan('tiny'));  // Registra las solicitudes HTTP (modo 'tiny')
+
+app.use(express.json()); 
+app.use(helmet()); 
+app.use(compression()); 
+app.use(morgan('tiny'));  
 
 // Configuración de limitación de peticiones (Rate Limiting)
 const limiter = rateLimit({
