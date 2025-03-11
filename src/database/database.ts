@@ -2,8 +2,8 @@ import { PrismaClient } from '@prisma/client'
 import { PrismaLibSQL } from '@prisma/adapter-libsql'
 import { createClient } from '@libsql/client'
 export const libsql = createClient({
-  url: 'libsql://turso-prisma-db-pablocou.turso.io',
-  authToken: "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3NDE1OTc2MDQsImlkIjoiYzRlMzlmYzAtYjQ5ZS00OTZmLWE0MGUtNzBkZTFiMWRiMTVlIn0.wYWLXOweY7OW3hA1xCxGPBnSEMy03kcVo_pF6VJu_RaMqN7_L0JVGQYQEvmHupyZTF0jqNCxr31DoQqaHURmDA",
+  url: 'libsql://gametu-db-pablocou.turso.io',
+  authToken: "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3NDE2ODE4OTksImlkIjoiMjJmYTI4MzAtZDRhMC00YWRmLThjZDItYjFiZmJjNTI2Yjk4In0._W6yMpCxY1H9SJghS5IyBko0KONoJAXjBgV-8AThjMmGsDAFqJmd-4jYA146-Az4yb3aP4idZoA4D-7YpxGAAQ",
   //syncUrl: 'file:./dev.db'
 })
 
