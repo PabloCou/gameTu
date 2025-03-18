@@ -27,4 +27,11 @@ export const categoryValidation = [
 export const rateValidation = [
     body('value').isInt({min:0, max:5}).toInt().withMessage('Value is required')
 ]
+
+export const quejaValidation = {
+    validations: [
+        body('user').isInt().toInt().withMessage('User ID is required'),
+    ],
+};
+
 //...

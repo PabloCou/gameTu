@@ -21,6 +21,7 @@ model User {
   updatedAt           DateTime @updatedAt
   rates               Rate[]
   gameOffers          GameOffer[]
+  quejas              Quejas[]
 }
 
 model Category {
@@ -63,4 +64,12 @@ model GameOffer {
   userCreator   User      @relation(fields: [idUserCreator], references: [id])
 
   rates         Rate[]
+}
+
+model Quejas {
+  id       Int      @id @default(autoincrement())
+  userId   Int   
+  titulo   String 
+  descripcion  String 
+  user    User    @relation(fields: [userId], references: [id])
 }
