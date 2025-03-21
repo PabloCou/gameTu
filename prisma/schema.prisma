@@ -22,6 +22,7 @@ model User {
   rates               Rate[]
   gameOffers          GameOffer[]
   quejas              Quejas[]
+  noticias            Noticias[]
 }
 
 model Category {
@@ -71,5 +72,13 @@ model Quejas {
   userId   Int   
   titulo   String 
   descripcion  String 
+  user    User    @relation(fields: [userId], references: [id])
+}
+
+model Noticias{
+  id       Int      @id @default(autoincrement())
+  userId   Int   
+  titular   String 
+  cuerpo  String 
   user    User    @relation(fields: [userId], references: [id])
 }

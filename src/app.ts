@@ -4,6 +4,7 @@ import userRouter from './routes/user.routes'
 import offerRouter from './routes/offer.routes'
 import categoryRouter from './routes/category.routes'
 import complaintsRouter from './routes/complaints.routes'
+import newsRouter from './routes/news.routes'
 
 import rateLimit from 'express-rate-limit'
 import helmet from 'helmet'
@@ -45,6 +46,7 @@ app.use('/api/users',userRouter)
 app.use('/api/game-offers', offerRouter)
 app.use('/api/categories', categoryRouter)
 app.use('/api/complaints', complaintsRouter)
+app.use('/api/news',newsRouter)
 
 
 app.get('/', (req:Request, res:Response)=>{
